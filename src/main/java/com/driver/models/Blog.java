@@ -79,6 +79,6 @@ public class Blog{
     @JoinColumn
     User user;
 
-    @OneToMany(mappedBy = "image", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
     List<Image> images = new ArrayList<>();
 }

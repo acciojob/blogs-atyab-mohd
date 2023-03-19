@@ -1,7 +1,5 @@
 package com.driver.controller;
 
-import com.driver.models.Blog;
-import com.driver.models.Image;
 import com.driver.services.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
