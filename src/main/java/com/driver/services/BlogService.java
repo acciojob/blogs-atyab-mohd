@@ -1,21 +1,14 @@
 package com.driver.services;
 
 import com.driver.models.Blog;
-import com.driver.models.Image;
 import com.driver.models.User;
 import com.driver.repositories.BlogRepository;
-import com.driver.repositories.ImageRepository;
 import com.driver.repositories.UserRepository;
-import org.apache.tomcat.jni.Time;
-import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.print.attribute.standard.DateTimeAtCreation;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
 @Service
 public class BlogService {
@@ -37,7 +30,7 @@ public class BlogService {
         Calendar cal = Calendar.getInstance();
         Date date = cal.getTime();
         blog.setPubDate(date);
-        user.getBlogs().add(blog);
+        user.getBlogList().add(blog);
         userRepository1.save(user);
         return blog;
     }

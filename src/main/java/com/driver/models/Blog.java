@@ -27,12 +27,12 @@ public class Blog{
         this.user = user;
     }
 
-    public List<Image> getImages() {
-        return images;
+    public List<Image> getImageList() {
+        return ImageList;
     }
 
-    public void setImages(List<Image> images) {
-        this.images = images;
+    public void setImageList(List<Image> imageList) {
+        this.ImageList = imageList;
     }
 
     private String title;
@@ -80,5 +80,5 @@ public class Blog{
     User user;
 
     @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
-    List<Image> images = new ArrayList<>();
+    List<Image> ImageList = new ArrayList<>();
 }

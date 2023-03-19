@@ -69,14 +69,14 @@ public class User{
         this.id = id;
     }
 
-    public List<Blog> getBlogs() {
-        return blogs;
+    public List<Blog> getBlogList() {
+        return BlogList;
     }
 
-    public void setBlogs(List<Blog> blogs) {
-        this.blogs = blogs;
+    public void setBlogList(List<Blog> blogList) {
+        this.BlogList = blogList;
     }
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    List<Blog> blogs = new ArrayList<>();
+    List<Blog> BlogList = new ArrayList<>();
 }
